@@ -109,7 +109,7 @@ if (interactive()) {
                     filter(SPECIES_FINAL==pathogen)
             }
             
-            valueBox("Kingdom:",unique(values[,1]), color = "olive", icon=icon("fireplace"))
+            valueBox("Kingdom:",unique(values[,1]), color = "olive")
         })
         output$XXXX2 <- renderValueBox({
             host<- input$host
@@ -123,7 +123,7 @@ if (interactive()) {
                     filter(SPECIES_FINAL==pathogen)
             }
             
-            valueBox("Specie:",unique(values[,2]), color = "yellow", icon=icon("fireplace"))
+            valueBox("Specie:",unique(values[,2]), color = "yellow")
         })
         
         output$XXXX3 <- renderValueBox({
@@ -138,7 +138,7 @@ if (interactive()) {
                     filter(SPECIES_FINAL==pathogen)
             }
             
-            valueBox("Number of authors" ,paste("reporting information: ",length(unique(values[,5]))), color = "red", icon=icon("fireplace"))
+            valueBox("Number of authors" ,paste("reporting information: ",length(unique(values[,5]))), color = "red")
         })
         #Table macroplot ----
         output$table <- DT::renderDataTable({
