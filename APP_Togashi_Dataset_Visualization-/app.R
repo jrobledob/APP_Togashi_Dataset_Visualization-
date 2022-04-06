@@ -19,7 +19,7 @@ pathogens<- c("--SELECT--",unique(data$SPECIES_FINAL))
 
 
 
-if (interactive()) {
+
     # Define UI for application that draws a histogram
     ui <- fluidPage(
         useShinyjs(),
@@ -109,7 +109,7 @@ if (interactive()) {
                     filter(SPECIES_FINAL==pathogen)
             }
             
-            valueBox("Kingdom:",unique(values[,1]), color = "olive")
+            valueBox("Pathogen Type:",unique(values[,1]), color = "olive")
         })
         output$XXXX2 <- renderValueBox({
             host<- input$host
@@ -207,4 +207,3 @@ if (interactive()) {
     
     # Run the application 
     shinyApp(ui = ui, server = server)
-}
